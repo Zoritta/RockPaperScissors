@@ -1,7 +1,24 @@
+import tkinter as tk
+
+
+
+
+
+
 from threading import Thread
 from network import connect, send
 
 
+def tk_sleep(window, t):
+    ms = int(t*1000)
+    var = tk.IntVar(window)
+    window.after(ms, lambda:
+                 var.set(1))
+    window.wait_variable(var)
+
+
+
+    
 def send_message():
     while True:
         send(input())
