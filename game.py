@@ -130,7 +130,7 @@ frame.pack()
 player_name_label = Label(window,
                           text="",
                           font="normal 20 bold",
-                          bg="green",
+                          bg="light green",
                           width=15,
                           borderwidth=2,
                           relief="solid")
@@ -153,7 +153,7 @@ player2_selection_label.pack()
 status_label = Label(window,
                      text="",
                      font="normal 20 bold",
-                     bg="white",
+                     bg="light yellow",
                      width=15,
                      borderwidth=2,
                      relief="solid")
@@ -184,7 +184,7 @@ Button(window, text="Reset Game",
 
 
 def get_player2_and_decide_game_runner(user, message):
-    # who is the server (= the creator of the channel)
+    # who is the player1 (= the creator of the channel)
     if 'created the channel' in message:
         name = message.split("'")[1]
     # who is the player2 (= the one that joined that is not player1)
